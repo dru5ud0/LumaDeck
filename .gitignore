@@ -1,0 +1,41 @@
+# Local Android/Gradle state
+.gradle/
+.kotlin/
+.idea/
+**/build/
+!app/src/main/java/com/nuvio/tv/core/build/
+!app/src/main/java/com/nuvio/tv/core/build/*.kt
+local.properties
+local.dev.properties
+*.iml
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Credentials, signing material, and service configuration
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.env
+.env*
+sentry.properties
+google-services.json
+
+# Local outputs and diagnostics
+*.apk
+*.aab
+*.log
+*.hprof
+*.db
+*.sqlite*
+out/
+tmp/
+artifacts/
+*.tar.gz
+*.zip
+*.7z
+__pycache__/
+*.py[cod]
+.DS_Store
