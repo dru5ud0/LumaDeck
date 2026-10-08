@@ -1,6 +1,6 @@
-# Android TV de-slop playbook
+# Android TV deployment guide
 
-This is the system design behind LumaDeck: keep the screen, remote, watchlist, and media sources under the user's control. It is a layered setup. The Android app handles the TV interface; Android or Roku still owns its operating system.
+This guide describes the deployment options and system boundaries for LumaDeck. The Android app provides the TV interface; Android or Roku remains responsible for the operating system and device-level startup behavior.
 
 ## Choose the deployment route
 
@@ -37,7 +37,7 @@ The local Roku preview reached a remote-navigable home screen; its code also con
 
 ## What the Android app removes from the daily workflow
 
-| Slop source | LumaDeck approach | Important limit |
+| Problem area | LumaDeck approach | Important limit |
 | --- | --- | --- |
 | Vendor home feed and scattered app tiles | Select the app as Home, use its restrained TV navigation and curated rows. | System-level ads, settings, and vendor overlays are outside the app. |
 | Watchlists fragmented across services | Profile-scoped library, watched state, Continue Watching, Stremio export import, optional sync. | Import is best-effort; sync needs a backend. |
@@ -55,4 +55,4 @@ The local Roku preview reached a remote-navigable home screen; its code also con
 - **Roku parity:** port discovery, auth, library, playback compatibility, and remote UX as a distinct Roku project if native Roku is a goal. The Android code cannot simply be sideloaded to Roku.
 - **Reliability:** test boot, Home, external-app return, network outage, missing addon, cache clearing, and low-memory behavior on the actual target hardware. A successful compile is not proof of device-level smoothness.
 
-The point is a less extractive living-room workflow, not a promise to remove every vendor component from Android or Roku. No rooting, firmware modification, DRM bypass, or unauthorized media access is required for the setup described here.
+This setup does not remove every vendor component from Android or Roku. It does not require rooting, firmware modification, DRM bypass, or unauthorized media access.

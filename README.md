@@ -1,10 +1,10 @@
 # LumaDeck
 
-### One screen. Your sources. No walled garden.
-
-LumaDeck is a source-driven Android TV media hub for people who want their living-room screen back. It brings discovery, personal libraries, playback, and external app launchers into one remote-friendly interface. Anti-subscription-stack, anti-platform-lock-in, high-seas energy; user-controlled infrastructure. The app does **not** ship movies, shows, streams, provider credentials, or a subscription service.
+LumaDeck is an Android TV media hub with Stremio-compatible addon catalogs and streams, local Jellyfin library access, profile-scoped watch progress, configurable playback, and shortcuts to installed TV apps. Media sources, service accounts, and server instances are configured by the user; they are not bundled with the app.
 
 This is an independent, experimental derivative of [NuvioTV](https://github.com/NuvioMedia/NuvioTV), not an official release or a complete rebrand of its Android package. The source is public under [GPL-3.0](LICENSE).
+
+For installation and configuration, see the [setup and integration guide](docs/SETUP_GUIDE.md). It covers recommended add-ons, TorBox, AIOStreams, Jellyfin, TMDB, playback helpers, Android TV Home selection, and Roku TV deployment.
 
 ## Feature map
 
@@ -47,9 +47,9 @@ The features below are present in the source tree. Availability depends on the b
 - Optional Trakt and Simkl tracking/sync integrations.
 - Local data is profile-scoped where implemented. Do not place exports, access tokens, addon configuration URLs, or real account screenshots in Git.
 
-## The de-slop stack
+## Deployment and integration model
 
-The goal is a TV that opens to **your** library and tools, not a vendor's ad shelf. LumaDeck is one layer of that system, not a magic Android debloater:
+LumaDeck can replace the daily Home interface on compatible Android TV devices. It does not modify the operating system or remove vendor components:
 
 | Layer | What we do | Boundary |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ The goal is a TV that opens to **your** library and tools, not a vendor's ad she
 | Performance | Offer cache-clear and restart controls, player settings, and TV-focused focus/navigation behavior. | Cache clearing is manual in this snapshot; it cannot fix hardware limits or a failing service. |
 | Look | Minimal glass-style surfaces and optional CRT playback effects instead of a crowded platform feed. | CRT Full affects video output; it does not change the TV's physical resolution or operating system. |
 
-See the [Android TV de-slop playbook](docs/ANDROID_DESLOP.md) for the exact app/device/service split, a reversible setup path, and the remaining engineering work.
+See the [Android TV deployment guide](docs/ANDROID_DESLOP.md) for the app/device/service split, a reversible setup path, and the remaining engineering work.
 
 ### What happens when the TV turns on?
 
@@ -117,7 +117,7 @@ The debug build uses the Android debug signing key. Release signing requires you
 
 This repository contains source and selected public UI screenshots. It intentionally excludes APKs, signing keys, service secrets, account exports, logs, private screenshots, local server URLs, and the separate Roku preview. The Roku TV prototype is **not** an Android build and is not feature-parity with this app.
 
-LumaDeck does not bypass DRM, provide copyrighted video/audio content, guarantee access to any catalog, or make a third-party service free. Use sources, files, and services you are authorized to access. The anti-walled-garden stance is about control of the interface, the library, and the choice of providers—not a claim of rights over someone else's work.
+LumaDeck does not bypass DRM, provide copyrighted video/audio content, guarantee access to any catalog, or make a third-party service free. Use sources, files, and services you are authorized to access.
 
 ## Credits and license
 
