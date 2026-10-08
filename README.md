@@ -1,8 +1,18 @@
-# NuvioMedia
+# LumaDeck
 
 A personal Android TV media-hub customization based on the open-source [NuvioTV](https://github.com/NuvioMedia/NuvioTV) project. This is a source snapshot, not an official NuvioTV release.
 
 It includes the TV-focused interface and in-progress additions such as CRT display options, related-title discovery, Jellyfin local-library integration, and data-import work. Some features require your own accounts, services, or network setup and may still be experimental.
+
+## Screenshots
+
+Anime catalog and home navigation:
+
+![Anime catalog with the TV navigation bar](docs/screenshots/anime-catalog.png)
+
+Settings and account screen:
+
+![Settings and account screen](docs/screenshots/settings.png)
 
 ## Build
 
@@ -14,7 +24,7 @@ Open this project in Android Studio with a current Android SDK, then build a deb
 
 On Windows, run `gradlew.bat :app:assembleFullDebug` instead. Supply any optional service settings in your own ignored `local.dev.properties` or `local.properties`; see `local.example.properties` for examples. Do not commit credentials, addon configuration URLs, signing keys, or account exports.
 
-The project includes native libraries used by the upstream Android app. The separate Roku preview, APKs, logs, screenshots, account data, and machine-specific files are intentionally not part of this repository.
+The project includes native libraries used by the upstream Android app. The separate Roku preview, APKs, logs, private screenshots, account data, and machine-specific files are intentionally not part of this repository.
 
 ## Attribution and license
 
